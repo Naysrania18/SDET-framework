@@ -1,4 +1,4 @@
-# Citco-style SDET Test Automation Framework (Python)
+# SDET Test Automation Framework (Python)
 
 One framework testing four layers — **API, UI, Database, ETL** — plus BDD, CI/CD and an AI-assisted test-design workflow.
 
