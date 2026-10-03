@@ -1,0 +1,18 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: playwright install --with-deps chromium
+      - name: Smoke tests (fast gate)
+        run: pytest -m smoke -n auto
+      - name: Full regression
+        run: pytest -n auto
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: html-report, path: reports/ }

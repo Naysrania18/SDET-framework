@@ -1,0 +1,8 @@
+ID,Requirement,Title,Preconditions,Steps,Expected,Type,Priority,Layer
+TC-01,REQ-1 Login,Valid login,User exists,Enter valid creds and submit,Products page shown,positive,P1,ui
+TC-02,REQ-1 Login,Locked user,Locked user exists,Enter locked creds,Error 'locked out',negative,P1,ui
+TC-03,REQ-1 Login,Empty username,None,Submit with empty username,Error 'Username is required',negative,P2,ui
+TC-04,REQ-2 Users API,Get existing user,API up,GET /users/1,200 and schema valid,positive,P1,api
+TC-05,REQ-2 Users API,Get unknown user,API up,GET /users/9999,404,negative,P2,api
+TC-06,REQ-3 Trade load,No rows lost,Source CSV loaded,Compare counts,Counts equal,data,P1,etl
+TC-07,REQ-3 Trade load,No bad quantity,Table has CHECK,Insert quantity 0,Rejected,boundary,P2,db

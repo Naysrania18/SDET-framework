@@ -1,0 +1,6 @@
+# BUG-001: <short, specific title>
+- **Severity/Priority:** Major / P2   **Env:** QA, Chrome 130
+- **Steps:** 1) ... 2) ... 3) ...
+- **Expected:** ...   **Actual:** ...
+- **Evidence:** screenshot / log / request-response
+- **Linked test case:** TC-xx   **Requirement:** REQ-x
